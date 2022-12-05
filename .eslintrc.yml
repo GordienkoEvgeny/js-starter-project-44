@@ -1,14 +1,30 @@
+---
+
+plugins:
+  - import
+# https://eslint.org/docs/user-guide/configuring#specifying-environments
 env:
-  browser: true
-  es2021: true
-extends: airbnb-base
-overrides: []
+  node: true
+
+extends: 
+  - 'airbnb-base'
+  - eslint:recommended
+  - plugin:import/recommended
+  # alternatively, 'recommended' is the combination of these two rule sets:
+  - plugin:import/errors
+  - plugin:import/warnings
+
 parserOptions:
   ecmaVersion: latest
-  sourceType: module
+
 rules:
   no-console: 0
-  import/extensions:
+  import/extensions: # FIXME: remove when rule will be adjusted for new nodejs version
     - error
     - ignorePackages
     - js: always
+  import/no-unresolved: [2, {commonjs: true, amd: true}]
+  import/named: 2
+  import/namespace: 2
+  import/default: 2
+  import/export: 2
