@@ -1,7 +1,8 @@
+/* eslint-disable no-console,  import/extensions */
 import readlineSync from 'readline-sync';
 
-export const getGreetingByName = (name) =>{
-    const userName = readlineSync.question ('May I have your name? ' );
-   name = console.log('Hello, ' +  userName + '!');
-   return  name
+const getGreetingByName = () => {
+  const userName = readlineSync.question('May I have your name? ');
+  return console.log(`Hello, ${userName}!`);
 };
+export default getGreetingByName;
