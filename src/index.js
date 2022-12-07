@@ -11,6 +11,7 @@ export const inputUserValue = () => {
   const value = readlineSync.question('Your answer: ');
   return value;
 };
+
 export const getCorrect = () => console.log('Correct!');
 
 export const getWrongAnswer = (userValue, result, userName) => console.log(`'${userValue}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`);
