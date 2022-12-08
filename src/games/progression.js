@@ -26,7 +26,7 @@ export const runsGameLogicBrainProgression = () => {
     const array = getGeneratedRandomArray();
     const sliceStart = array.slice(0, result);
     const sliceEnd = array.slice(result + 1, 10);
-    console.log(`Question:  ${sliceStart.join(' ')} ${x} ${sliceEnd.join(' ')}`);
+    console.log(`Question: ${sliceStart.join(' ')} ${x} ${sliceEnd.join(' ')}`);
     const value = inputUserValue();
     const userValue = Number(value);
     switch (array[result]) {
