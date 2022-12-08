@@ -17,7 +17,7 @@ export const runsGameLogicBrainCalc = () => {
     const secondNum = getRandomNumber(1, 10);
     const sign = ['+', '-', '*'];
     const randomSign = Math.floor(Math.random() * sign.length);
-    console.log(`Question: ${firstNum}${sign[randomSign]}${secondNum} `);
+    console.log('Question: ' + firstNum + sign[randomSign] + secondNum);
     const value = inputUserValue();
     const userValue = Number(value);
     if (sign[randomSign] === '+') {
