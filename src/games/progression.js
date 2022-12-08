@@ -1,6 +1,7 @@
 import {
   getRandomNumber, inputUserValue, getWrongAnswer, returnWinner, getCorrect,
 } from '../index.js';
+import getGreetingByName from '../cli.js';
 
 export const instructionProgr = () => {
   console.log('What number is missing in the progression?');
@@ -16,7 +17,9 @@ const getGeneratedRandomArray = () => {
   } return arrayNumber;
 };
 
-export const runsGameLogicBrainProgression = (userName) => {
+export const runsGameLogicBrainProgression = () => {
+  const userName = getGreetingByName();
+  instructionProgr();
   const result = getRandomNumber(1, 10);
   const x = '..';
   for (let k = 0; k < 3; k += 1) {

@@ -1,12 +1,15 @@
 import {
   getRandomNumber, inputUserValue, getWrongAnswer, returnWinner, getCorrect,
 } from '../index.js';
+import getGreetingByName from '../cli.js';
 
 export const instructionCalc = () => {
   console.log('What is the result of the expression?');
 };
 
-export const runsGameLogicBrainCalc = (userName) => {
+export const runsGameLogicBrainCalc = () => {
+  const userName = getGreetingByName();
+  instructionCalc();
   let count = 0;
   let result = 0;
   while (count < 3) {

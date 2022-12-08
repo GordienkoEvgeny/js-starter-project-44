@@ -1,11 +1,14 @@
 import {
   getRandomNumber, inputUserValue, getWrongAnswer, returnWinner, getCorrect,
 } from '../index.js';
+import getGreetingByName from '../cli.js';
 
 export const instructionEven = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 };
-export const runsGameLogicBrainEven = (userName) => {
+export const runsGameLogicBrainEven = () => {
+  const userName = getGreetingByName();
+  instructionEven();
   let count = 0;
   let result;
   while (count < 3) {

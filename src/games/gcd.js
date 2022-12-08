@@ -1,8 +1,9 @@
 import {
   getRandomNumber, inputUserValue, getWrongAnswer, returnWinner, getCorrect,
 } from '../index.js';
+import getGreetingByName from '../cli.js';
 
-export const instructionGCD = () => {
+const instructionGCD = () => {
   console.log('Find the greatest common divisor of given numbers.');
 };
 
@@ -13,7 +14,9 @@ const getGCD = (number1, number2) => {
   } return number1;
 };
 
-export const runsGameLogicBrainGCD = (userName) => {
+const runsGameLogicBrainGCD = () => {
+  const userName = getGreetingByName();
+  instructionGCD();
   let count = 0;
   let result = 0;
   while (count < 3) {
@@ -33,3 +36,4 @@ export const runsGameLogicBrainGCD = (userName) => {
     }
   } return returnWinner(userName);
 };
+export default runsGameLogicBrainGCD;
