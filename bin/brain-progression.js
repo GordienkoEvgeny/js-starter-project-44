@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import { runsGameLogicBrainProgression } from '../src/games/progression.js';
+import { outInstructionBrainProgression, logicBrainProgression } from '../src/games/progression.js';
+import { runGame } from '../src/index.js';
+import displayGreetingReturnName from '../src/cli.js';
 
-runsGameLogicBrainProgression();
+runGame(displayGreetingReturnName, outInstructionBrainProgression, logicBrainProgression);

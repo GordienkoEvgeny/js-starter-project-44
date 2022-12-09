@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import { runsGameLogicBrainCalc } from '../src/games/calc.js';
+import { outInstructionCalc, logicBrainCalc } from '../src/games/calc.js';
+import { runGame } from '../src/index.js';
+import displayGreetingReturnName from '../src/cli.js';
 
-runsGameLogicBrainCalc();
+runGame(displayGreetingReturnName, outInstructionCalc, logicBrainCalc);

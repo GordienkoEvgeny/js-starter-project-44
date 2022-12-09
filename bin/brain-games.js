@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import getGreetingByName from '../src/cli.js';
+import displayGreetingReturnName from '../src/cli.js';
 
-getGreetingByName();
+displayGreetingReturnName();

@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import runsGameLogicBrainPrime from '../src/games/prime.js';
+import { outInstructionPrime, logicBrainPrime } from '../src/games/prime.js';
+import { runGame } from '../src/index.js';
+import displayGreetingReturnName from '../src/cli.js';
 
-runsGameLogicBrainPrime();
+runGame(displayGreetingReturnName, outInstructionPrime, logicBrainPrime);

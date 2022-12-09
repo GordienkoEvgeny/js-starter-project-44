@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import { runsGameLogicBrainEven } from '../src/games/even.js';
+import { outInstructionEven, logicBrainEven } from '../src/games/even.js';
+import { runGame } from '../src/index.js';
+import displayGreetingReturnName from '../src/cli.js';
 
-runsGameLogicBrainEven();
+runGame(displayGreetingReturnName, outInstructionEven, logicBrainEven);

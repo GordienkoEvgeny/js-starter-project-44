@@ -1,32 +1,16 @@
-import {
-  getRandomNumber, inputUserValue, getWrongAnswer, returnWinner, getCorrect,
-} from '../index.js';
-import getGreetingByName from '../cli.js';
+import { getRandomNumber } from '../index.js';
 
-export const instructionEven = () => {
+export const outInstructionEven = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 };
-export const runsGameLogicBrainEven = () => {
-  const userName = getGreetingByName();
-  instructionEven();
-  let count = 0;
+export const logicBrainEven = () => {
   let result;
-  while (count < 3) {
-    const randomNum = getRandomNumber();
-    console.log(`Question: ${randomNum}`);
-    const userValue = inputUserValue();
-    if (randomNum % 2 === 0) {
-      result = 'yes';
-    } else {
-      result = 'no';
-    }
-    switch (result) {
-      case userValue.toLowerCase():
-        getCorrect();
-        count += 1;
-        break;
-      default:
-        return getWrongAnswer(userValue, result, userName);
-    }
-  } return returnWinner(userName);
+  const number = getRandomNumber();
+  if (number % 2 === 0) {
+    result = 'yes';
+  } else {
+    result = 'no';
+  }
+  const dataGame = [result, number];
+  return dataGame;
 };

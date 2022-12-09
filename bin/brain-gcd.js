@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import runsGameLogicBrainGCD from '../src/games/gcd.js';
+import { outInstructionGCD, logicBrainGCD } from '../src/games/gcd.js';
+import { runGame } from '../src/index.js';
+import displayGreetingReturnName from '../src/cli.js';
 
-runsGameLogicBrainGCD();
+runGame(displayGreetingReturnName, outInstructionGCD, logicBrainGCD);

@@ -1,39 +1,24 @@
-import {
-  getRandomNumber, inputUserValue, getWrongAnswer, returnWinner, getCorrect,
-} from '../index.js';
-import getGreetingByName from '../cli.js';
+import { getRandomNumber } from '../index.js';
 
-export const instructionCalc = () => {
+export const outInstructionCalc = () => {
   console.log('What is the result of the expression?');
 };
 
-export const runsGameLogicBrainCalc = () => {
-  const userName = getGreetingByName();
-  instructionCalc();
-  let count = 0;
+export const logicBrainCalc = () => {
   let result = 0;
-  while (count < 3) {
-    const firstNum = getRandomNumber(1, 10);
-    const secondNum = getRandomNumber(1, 10);
-    const sign = ['+', '-', '*'];
-    const randomSign = Math.floor(Math.random() * sign.length);
-    const signDerivation = sign[randomSign];
-    console.log(`Question: ${firstNum} ${signDerivation} ${secondNum}`);
-    const value = inputUserValue();
-    const userValue = Number(value);
-    if (sign[randomSign] === '+') {
-      result = (firstNum + secondNum);
-    } else if (sign[randomSign] === '-') {
-      result = (firstNum - secondNum);
-    } else if (sign[randomSign] === '*') {
-      result = (firstNum * secondNum);
-    } switch (result) {
-      case userValue:
-        count += 1;
-        getCorrect();
-        break;
-      default:
-        return getWrongAnswer(value, result, userName);
-    }
-  } return returnWinner(userName);
+  const firstNum = getRandomNumber(1, 10);
+  const secondNum = getRandomNumber(1, 10);
+  const sign = ['+', '-', '*'];
+  const randomSign = Math.floor(Math.random() * sign.length);
+  const signDerivation = sign[randomSign];
+  const questionString = `${firstNum} ${signDerivation} ${secondNum}`;
+  if (sign[randomSign] === '+') {
+    result = (firstNum + secondNum);
+  } else if (sign[randomSign] === '-') {
+    result = (firstNum - secondNum);
+  } else if (sign[randomSign] === '*') {
+    result = (firstNum * secondNum);
+  }
+  const dataGame = [result, questionString];
+  return dataGame;
 };
