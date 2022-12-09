@@ -5,7 +5,7 @@ export const outInstructionBrainProgression = () => {
 };
 
 const GeneratedArray = () => {
-  const divisor = getRandomNumber(2, 8);
+  const divisor = getRandomNumber(2, 7);
   const arrayNumber = [];
   for (let i = 2; i < getRandomNumber(60, 100); i += 1) {
     if (i % divisor === 0) {
