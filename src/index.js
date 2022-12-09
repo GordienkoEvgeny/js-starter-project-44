@@ -11,8 +11,8 @@ export const getUserValue = () => {
 };
 
 export const getQuestion = (num) => {
-  const conc = `Question: ${num}`;
-  return (conc);
+  const questionString = `Question: ${num}`;
+  return (questionString);
 };
 
 export const checkingTheAnswer = (userValue, result) => {
